@@ -17,12 +17,21 @@ class EventPractice extends Component {
           onChange={(e) => {
             // console.log(e);
             // console.log(e.target.value);
-
             this.setState({
               message: e.target.value,
             });
           }}
         />
+        <button
+          onClick={() => {
+            alert(this.state.message);
+            this.setState({
+              message: '',
+            });
+          }}
+        >
+          확인
+        </button>
       </div>
     );
   }
